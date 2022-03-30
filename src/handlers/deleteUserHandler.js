@@ -5,12 +5,11 @@ const { response200, response204 } = require('./helpers/responseHelper');
 
 module.exports = (request, h) => {
 
-    let recordIdx = globalStore.findIndex((e) => e.id === parseInt(request.payload.id));
+    let recordIdx = globalStore.findIndex((e) => e.id === parseInt(request.params.id));
     if (recordIdx !== -1) {
-        globalStore[recordIdx] = request.payload;
-        return response200(h, globalStore[recordIdx]);
+        globalStore.splice(recordIdx, 1);
+        return response200(h);
     } else {
         return response204(h);
     }
-
 }

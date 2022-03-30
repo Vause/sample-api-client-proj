@@ -1,6 +1,7 @@
 'use strict';
 
 const globalStore = require('../store/globalStore');
+const { response200 } = require('./helpers/responseHelper');
 
 module.exports = (request, h) => {
 
@@ -16,5 +17,5 @@ module.exports = (request, h) => {
         cache.set(id, ret);
     }
 
-    return h.response(ret);
+    return response200(h, ret);
 }

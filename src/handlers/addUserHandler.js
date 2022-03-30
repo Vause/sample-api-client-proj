@@ -1,11 +1,15 @@
 'use strict';
 
 const globalStore = require('../store/globalStore');
+const { response201 } = require('./helpers/responseHelper');
+
 
 module.exports = (request, h) => {
     globalStore.push(request.payload);
 
-    return h.response({
+    const responseObject = {
         message: `Inserting ID ${request.payload.id}`
-    }).code(201);
+    };
+
+    return response201(h, responseObject);
 }
