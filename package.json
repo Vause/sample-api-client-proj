@@ -1,0 +1,19 @@
+{
+  "name": "sample-api-client-proj",
+  "version": "1.0.0",
+  "description": "An example proj to build api client quickly",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "client"
+  ],
+  "author": "Ruben",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "20.2.1",
+    "glob": "^7.2.0"
+  }
+}
