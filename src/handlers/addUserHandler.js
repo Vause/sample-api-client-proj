@@ -3,13 +3,12 @@
 const globalStore = require('../store/globalStore');
 const { response201 } = require('./helpers/responseHelper');
 
-
 module.exports = (request, h) => {
-    globalStore.push(request.payload);
+    try {
+        globalStore.push(request.payload);
+        return response201(h, request.payload);
 
-    const responseObject = {
-        message: `Inserting ID ${request.payload.id}`
-    };
-
-    return response201(h, responseObject);
+    } catch (error) {
+        throw new Error(error);
+    }
 }

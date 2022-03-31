@@ -1,6 +1,6 @@
 {
   "name": "sample-api-client-proj",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An example proj to build api client quickly",
   "main": "src/index.js",
   "scripts": {
@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "20.2.1",
-    "glob": "7.2.0"
+    "glob": "7.2.0",
+    "paginate-info": "1.0.4"
   }
 }
